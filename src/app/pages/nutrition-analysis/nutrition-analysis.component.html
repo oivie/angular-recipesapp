@@ -1,0 +1,22 @@
+<div class="nutrition-analysis-page">
+    <h1>Nutrition Analysis</h1>
+    <div>
+      <label for="food-input">Enter Food Items:</label>
+      <input
+        id="food-input"
+        type="text"
+        [(ngModel)]="foodInput"
+        placeholder="E.g., 1 apple, 1 banana"
+      />
+      <button (click)="analyzeNutrition()">Analyze</button>
+    </div>
+  
+    <div *ngIf="nutritionData">
+      <h2>Nutrition Information</h2>
+      <p><strong>Calories:</strong> {{ nutritionData.calories }}</p>
+      <p><strong>Protein:</strong> {{ nutritionData.totalNutrients.PROCNT?.quantity || 0 }} g</p>
+      <p><strong>Fat:</strong> {{ nutritionData.totalNutrients.FAT?.quantity || 0 }} g</p>
+      <p><strong>Carbs:</strong> {{ nutritionData.totalNutrients.CHOCDF?.quantity || 0 }} g</p>
+    </div>
+  </div>
+  

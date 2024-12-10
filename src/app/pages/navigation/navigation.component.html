@@ -1,0 +1,32 @@
+<nav class="navbar animate-slideDown">
+  <div class="container flex justify-between items-center">
+    <!-- Logo -->
+    <a routerLink="/" class="logo text-white text-xl font-bold">RecipesApp</a>
+
+    <!-- Desktop Navigation Links -->
+    <ul class="nav-links hidden md:flex gap-6">
+      <li><a routerLink="/" routerLinkActive="active" class="nav-item">Home</a></li>
+      <li><a routerLink="/search-meal" routerLinkActive="active" class="nav-item">Search Meal</a></li>
+      <li><a routerLink="/form" routerLinkActive="active" class="nav-item">Submit Form</a></li>
+    </ul>
+
+    <!-- Burger Menu -->
+    <div class="burger-menu md:hidden flex flex-col" (click)="toggleMenu()">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul
+    class="nav-links-mobile fixed top-0 right-0 bg-green-800 text-white w-3/4 h-screen flex-col justify-center items-center transition-transform duration-300 transform"
+    [class.translate-x-full]="!menuActive"
+    [class.translate-x-0]="menuActive"
+  >
+    <button class="mobile-close-btn" (click)="toggleMenu()">Close</button>
+    <li><a routerLink="/" routerLinkActive="active" class="mobile-nav-item" (click)="toggleMenu()">Home</a></li>
+    <li><a routerLink="/search-meal" routerLinkActive="active" class="mobile-nav-item" (click)="toggleMenu()">Search Meal</a></li>
+    <li><a routerLink="/form" routerLinkActive="active" class="mobile-nav-item" (click)="toggleMenu()">Submit Form</a></li>
+  </ul>
+</nav>

@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-dots {
+      background-image: radial-gradient(circle, #778571 1px, transparent 1px);
+      background-size: 10px 10px; /* Adjust dot spacing */
+    }
+  }
+  

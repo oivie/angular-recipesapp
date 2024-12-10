@@ -1,0 +1,49 @@
+/* General styles */
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    padding: 16px;
+    background-color: #FEFAEF;
+  }
+  
+  .main-banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .button-section button {
+    margin: 0 8px;
+  }
+  
+  .buzzwords-section span {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Add these custom Tailwind classes or modify the inline styles */
+  .btn-standard {
+    @apply bg-[#F4C324] text-[#2F4231] font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#2F4231] hover:text-white transition duration-300;
+  }
+  
+  @media (max-width: 640px) {
+    .btn-standard {
+      @apply w-full; /* Full-width on mobile */
+    }
+  }
+  
+  
+
+  .buzzwords-section .grid {
+    @apply grid-cols-4 gap-4 md:grid-cols-2 sm:grid-cols-1; /* Adjust for smaller screens */
+  }
+  
+  
+  @media (max-width: 640px) {
+    .buzzwords-section .grid {
+      @apply grid-cols-1 gap-2; /* Stacked layout for mobile devices */
+    }
+  }
+  

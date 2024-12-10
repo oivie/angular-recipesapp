@@ -1,0 +1,11 @@
+.error-message {
+    color: #e53e3e; /* Tailwind's red-600 */
+    font-size: 0.875rem; /* sm */
+    margin-top: 0.25rem; /* mt-1 */
+  }
+  
+  input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched {
+    border-color: #e53e3e; /* Tailwind's red-600 */
+  }
+  

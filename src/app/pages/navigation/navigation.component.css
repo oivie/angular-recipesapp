@@ -1,0 +1,106 @@
+/* Navbar Styling */
+.navbar {
+  background-color: #3d5c47; /* Dark green */
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease; /* Polished transition */
+}
+
+/* Active or Hover */
+.nav-item:hover,
+.nav-item.router-link-active {
+  color: #ffcc66; /* Highlight color */
+  border-bottom: 2px solid #ffcc66; /* Keep only underline */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* Mobile Navigation Menu */
+.nav-links-mobile {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%; /* Mobile menu width */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d5c47;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+  z-index: 1001;
+}
+
+.nav-links-mobile.translate-x-0 {
+  transform: translateX(0);
+}
+
+/* Close Button for Mobile Menu */
+.mobile-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #ffcc66;
+  color: #3d5c47;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-close-btn:hover {
+  background-color: #ffd880; /* Slightly lighter yellow */
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 4px 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

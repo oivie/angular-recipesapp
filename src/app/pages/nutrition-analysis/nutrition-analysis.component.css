@@ -1,0 +1,31 @@
+/* Nutrition Analysis Page */
+.nutrition-analysis-page {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .input-section {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .result-section {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .btn-standard {
+    background-color: #F4C324;
+    color: #2F4231;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-standard:hover {
+    background-color: #2F4231;
+    color: #ffffff;
+  }
+  
