@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
+
 export class ApiService {
   private nutritionApiUrl = 'https://api.edamam.com/api/nutrition-details';
   private mealPlannerApiUrl = 'https://api.edamam.com/api/meal-planner/v1';
